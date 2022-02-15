@@ -1,0 +1,83 @@
+body {
+  background-color: pink;
+    
+}
+main{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.principal{
+    padding: 1% 5%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+   
+}
+.contenedor{
+    margin-top: 2%;
+}
+.contenido{
+    line-height: 40px;
+    text-align: start;
+    justify-content: start;
+    border-bottom: 1px solid grey;
+    display: grid;
+    width: 100%;
+    grid-gap: 1%;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: "img title title title title cant total"
+                         "img title title title title cant total"
+                         "delete delete delete delete delete delete delete ";
+}
+.img-product{
+    grid-area: img;
+}
+.titulo{
+    grid-area: title;
+    text-align: start;
+}
+.cant{
+    grid-area: cant;
+    grid-template-rows: auto 30px auto;
+}
+.subtotal{
+    grid-area: total;
+    grid-template-rows: auto 30px auto;
+}
+.eliminar{
+    grid-area: delete;
+    
+}
+
+.contenido div img{
+    max-width: 100px;
+}
+
+
+
+@media screen and (max-width:700px){
+
+    .contenido{
+        text-align: start;
+        justify-content: start;
+        border-bottom: 1px solid grey;
+        height: fit-content;
+        display: grid;
+        width: 100%;
+        grid-gap: 1%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3,0.3fr);
+        grid-template-areas: "img title title"
+                             "img cant  total"
+                             "delete delete delete ";
+    }
+
+    .principal{
+        margin: 3px;
+        padding: 0;
+        text-align: start;
+    }
+
+}
